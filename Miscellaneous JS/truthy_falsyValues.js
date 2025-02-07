@@ -16,8 +16,55 @@ else{
 // false
 // 0
 //-0
-// 0n
+// 0n //Bigint
 // '',"",``
 // null
 // undefined
-// NaN
+// NaN //NOT A NUMBER
+
+// Truthy
+// true
+// 1
+// []
+// {}
+// "0"
+// 'false'
+// " "
+// function(){} empty
+
+const userEmail = []
+
+if (userEmail.length===0){
+    console.log('Email is empty')
+}
+
+const emptyObj = {}
+if (Object.keys(emptyObj).length===0){
+    console.log('Object is empty')
+}
+
+if (false==0){
+    console.log(true)
+}
+
+if (''==0){
+    console.log(true)
+}
+
+if (false==''){
+    console.log(true)
+}
+
+// nullish coalescing operator (??) : null undefined
+let val1;
+val1 = 5??10
+val1 = null??10
+val1 = undefined??15
+val1 = undefined?? null??20
+
+console.log(val1)
+
+// Terniary operator
+// condition? true:false
+const iceTeaPrice = 50 //fasle for 100 true
+iceTeaPrice>=80 ? console.log("more than 80"): console.log("less than 80")
